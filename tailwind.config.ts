@@ -109,6 +109,20 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			fontFamily: {
+				'korean': ['Nanum Gothic', '나눔고딕', 'sans-serif'],
+				'english': ['Quicksand', 'Comic Sans MS', 'cursive'],
+				'mixed': ['Nanum Gothic', '나눔고딕', 'Quicksand', 'sans-serif'],
+			},
+			fontSize: {
+				'xs': ['0.75rem', { lineHeight: '1.4' }],
+				'sm': ['0.875rem', { lineHeight: '1.5' }],
+				'base': ['1rem', { lineHeight: '1.6' }],
+				'lg': ['1.125rem', { lineHeight: '1.6' }],
+				'xl': ['1.25rem', { lineHeight: '1.5' }],
+				'2xl': ['1.5rem', { lineHeight: '1.4' }],
+				'3xl': ['1.875rem', { lineHeight: '1.3' }],
 			}
 		}
 	},
