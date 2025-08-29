@@ -53,6 +53,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				userMessage: {
+					bg: 'hsl(var(--user-message-bg))',
+					text: 'hsl(var(--user-message-text))',
+					border: 'hsl(var(--user-message-border))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

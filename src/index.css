@@ -8,50 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* 깔끔하고 현대적인 컬러 팔레트 */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 15%;
+    /* 전래동화 테마 - 따뜻한 주황색, 갈색 톤 */
+    --background: 35 30% 96%;      /* 크림색 배경 */
+    --foreground: 25 20% 20%;      /* 어두운 갈색 텍스트 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card: 35 25% 98%;            /* 밝은 크림색 카드 */
+    --card-foreground: 25 20% 20%; /* 어두운 갈색 텍스트 */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover: 35 25% 98%;         /* 밝은 크림색 팝오버 */
+    --popover-foreground: 25 20% 20%; /* 어두운 갈색 텍스트 */
 
-    /* 중성적인 메인 컬러 */
-    --primary: 0 0% 15%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 0 0% 25%;
+    /* 따뜻한 주황색 메인 컬러 */
+    --primary: 25 95% 53%;         /* 밝은 주황색 */
+    --primary-foreground: 0 0% 98%; /* 흰색 텍스트 */
+    --primary-glow: 25 85% 45%;    /* 어두운 주황색 글로우 */
 
-    /* 부드러운 보조 컬러 */
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 25%;
+    /* 자연스러운 베이지 보조 컬러 */
+    --secondary: 30 25% 85%;       /* 밝은 베이지 */
+    --secondary-foreground: 30 25% 25%; /* 어두운 베이지 텍스트 */
 
-    /* 뮤트된 배경색 */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    /* 따뜻한 뮤트 컬러 */
+    --muted: 30 20% 90%;           /* 따뜻한 베이지 */
+    --muted-foreground: 30 20% 40%; /* 중간 베이지 텍스트 */
 
-    /* 액센트 컬러 (차분한 블루) */
-    --accent: 220 25% 95%;
-    --accent-foreground: 0 0% 15%;
+    /* 따뜻한 액센트 컬러 */
+    --accent: 25 30% 90%;          /* 따뜻한 크림색 */
+    --accent-foreground: 25 20% 20%; /* 어두운 갈색 텍스트 */
 
     /* 안전한 에러 컬러 */
     --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 15%;
+    /* 따뜻한 경계선과 입력 */
+    --border: 30 20% 80%;          /* 중간 베이지 */
+    --input: 30 20% 80%;           /* 중간 베이지 */
+    --ring: 25 95% 53%;            /* 주황색 링 */
 
-    /* 깔끔한 그라디언트 */
-    --gradient-story: linear-gradient(180deg, hsl(var(--background)), hsl(0 0% 96%));
-    --gradient-magic: linear-gradient(135deg, hsl(var(--accent)), hsl(220 30% 98%));
-    --gradient-warm: linear-gradient(180deg, hsl(var(--background)), hsl(0 0% 95%));
+    /* 사용자 메시지 전용 색상 */
+    --user-message-bg: 25 40% 75%; /* 밝은 주황색 베이지 */
+    --user-message-text: 25 20% 20%; /* 어두운 갈색 텍스트 */
+    --user-message-border: 25 35% 70%; /* 중간 주황색 베이지 */
 
-    /* 부드러운 섀도우 */
-    --shadow-story: 0 1px 3px hsl(0 0% 0% / 0.1);
-    --shadow-gentle: 0 1px 3px hsl(0 0% 0% / 0.1);
-    --shadow-magic: 0 4px 12px hsl(0 0% 0% / 0.15);
+    /* 전래동화 그라디언트 */
+    --gradient-story: linear-gradient(180deg, hsl(35 30% 96%), hsl(30 25% 90%));
+    --gradient-magic: linear-gradient(135deg, hsl(25 30% 90%), hsl(30 25% 85%));
+    --gradient-warm: linear-gradient(180deg, hsl(35 30% 96%), hsl(25 25% 88%));
+
+    /* 따뜻한 섀도우 */
+    --shadow-story: 0 1px 3px hsl(25 20% 20% / 0.15);
+    --shadow-gentle: 0 1px 3px hsl(25 20% 20% / 0.15);
+    --shadow-magic: 0 4px 12px hsl(25 20% 20% / 0.2);
 
     /* 애니메이션 */
     --transition-magical: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -59,21 +65,15 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    /* 사이드바 색상도 따뜻하게 */
+    --sidebar-background: 35 25% 95%;
+    --sidebar-foreground: 25 20% 20%;
+    --sidebar-primary: 25 95% 53%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 25 30% 90%;
+    --sidebar-accent-foreground: 25 20% 20%;
+    --sidebar-border: 30 20% 80%;
+    --sidebar-ring: 25 95% 53%;
   }
 
   .dark {
