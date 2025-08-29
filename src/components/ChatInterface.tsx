@@ -240,16 +240,16 @@ const ChatMessage = ({ turn }: ChatMessageProps) => {
         )}
       </div>
 
-      {/* 메시지 내용 - 사용자 메시지는 검은 말풍선으로 오른쪽에 표시 */}
+      {/* 메시지 내용 - 사용자 메시지는 따뜻한 주황색 베이지로 표시 */}
       <div className={cn(
         "relative max-w-[75%] rounded-2xl p-3 transition-all duration-300 shadow-sm",
         isUser 
-          ? "bg-foreground text-background shadow-md" // 검은 배경, 흰 텍스트, 그림자 추가
+          ? "bg-userMessage-bg text-userMessage-text border border-userMessage-border shadow-md" // 따뜻한 주황색 베이지 배경
           : "bg-card border border-border text-foreground"
       )}>
         <p className={cn(
           "text-sm leading-relaxed whitespace-pre-wrap break-words",
-          isUser ? "text-background" : "text-foreground"
+          isUser ? "text-userMessage-text" : "text-foreground"
         )}>
           {turn.content}
         </p>
@@ -257,7 +257,7 @@ const ChatMessage = ({ turn }: ChatMessageProps) => {
         {/* 타임스탬프 */}
         <time className={cn(
           "text-xs mt-1 opacity-60 block",
-          isUser ? "text-background" : "text-muted-foreground"
+          isUser ? "text-userMessage-text" : "text-muted-foreground"
         )} dateTime={new Date(turn.timestamp).toISOString()}>
           {new Date(turn.timestamp).toLocaleTimeString('ko-KR', { 
             hour: '2-digit', 
