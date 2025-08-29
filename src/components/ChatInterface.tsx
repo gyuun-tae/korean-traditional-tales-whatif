@@ -221,8 +221,10 @@ const ChatMessage = ({ turn }: ChatMessageProps) => {
   
   return (
     <div className={cn(
-      "flex items-start gap-3 animate-in fade-in-0 slide-in-from-bottom-4 duration-500",
-      isUser ? "flex-row-reverse justify-start" : "justify-start"
+      "flex items-start gap-3",
+      isUser 
+        ? "animate-in slide-in-from-right-4 duration-500 ease-out flex-row-reverse justify-start" 
+        : "animate-in slide-in-from-left-4 duration-600 ease-out justify-start"
     )} role="article">
       {/* 아바타 */}
       <div className={cn(
@@ -240,7 +242,7 @@ const ChatMessage = ({ turn }: ChatMessageProps) => {
 
       {/* 메시지 내용 - 사용자 메시지는 검은 말풍선으로 오른쪽에 표시 */}
       <div className={cn(
-        "relative max-w-[75%] rounded-2xl p-3 transition-all duration-200 shadow-sm",
+        "relative max-w-[75%] rounded-2xl p-3 transition-all duration-300 shadow-sm",
         isUser 
           ? "bg-foreground text-background shadow-md" // 검은 배경, 흰 텍스트, 그림자 추가
           : "bg-card border border-border text-foreground"
